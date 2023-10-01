@@ -1,7 +1,7 @@
 # CV_Generator
 **Introduction**
 The purpose of this project is to create a simple cv generator web application.
-Often times we have to create cv from the scratch for each job application we submit. This ofcourse is stressful and time consuming. Hence, this project aims to solve that problem by allowing us to fill in our details in different templates and download the expected result as a PDF. 
+Often times we have to create cv from the scratch for each job application we submit. This of course is stressful and time consuming. Hence, this project aims to solve that problem by allowing us to store all your working experiences in a database, then giving you the option to select the needed selection of experiences and a template, and lastly download the expected result as a PDF. 
 
 **Setup and installation**
 git clone <repo-url>
