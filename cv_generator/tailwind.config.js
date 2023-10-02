@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./cv_generator/main/static/**/*.{html,js}"],
+  content: ["./main/templates/**/*.{html,js}"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+    @apply text-teal-600 hover:underline
+}
+
+.btn {
+    @apply py-1 px-2 bg-teal-600 border-teal-600 border-2  text-white hover:text-teal-600 hover:bg-white 
+}
+
+thead {
+    @apply bg-teal-600 text-white
+}
+
+tr:nth-child(2n + 0) {
+    @apply bg-gray-200
+}
