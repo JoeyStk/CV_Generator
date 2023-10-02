@@ -22,7 +22,7 @@ class WorkingExperience(models.Model):
 
 class PersonalInformation(models.Model):
     name = models.CharField(max_length=25, blank=False)
-    email = models.EmailField(blank=False)
+    email = models.EmailField(max_length=255, blank=False)
     website_links = models.URLField(blank=True)
     profile_photo = models.ImageField(upload_to="images/", blank=False)
     phone_number = models.PositiveIntegerField(blank=False)
