@@ -10,14 +10,15 @@ class WordExperienceView(ListView):
         return WorkingExperience.objects.all()
 
     def get(self, request, *args, **kwargs):
-        experiences = self.model.objects.all()
+        if request.user:
+            experiences = self.model.objects.filter(user = request.user)
         context = {
-            'experiences': experiences,
+            'experiences': experiences if experiences else None,
         }
         return render(
             request, self.template_name, context
         )
-    
+
     def post(self, request, *args, **kwargs):
         selection = request.POST.getlist("show_in_cv")
         for experience in self.model.objects.all():

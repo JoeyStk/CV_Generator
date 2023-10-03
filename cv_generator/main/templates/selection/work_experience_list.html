@@ -7,7 +7,7 @@
             <td>
                 In CV
             </td>
-            <td>
+            <td colspan="2">
                 Date
             </td>
             <td>
@@ -29,7 +29,10 @@
                     <input value={{experience.id}} name="show_in_cv" type="checkbox" {% if experience.show_in_cv %} checked {% endif %}>
                 </td>
                 <td>
-                    {{ experience.date }}
+                    {{ experience.from_date }}
+                </td>
+                <td>
+                    {{ experience.until_date }}
                 </td>
                 <td>
                     {{ experience.title }}
