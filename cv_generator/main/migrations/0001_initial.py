@@ -38,27 +38,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="WorkingExperience",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
-                ("title", models.CharField(max_length=255)),
-                ("company_name", models.CharField(max_length=255, null=True)),
-                ("date", models.CharField(max_length=255, null=True)),
-                ("description", models.TextField(max_length=255)),
-                ("show_in_cv", models.BooleanField()),
-                (
-                    "user",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE,
-                        to=settings.AUTH_USER_MODEL,
-                    ),
-                ),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=255)),
+                ('company_name', models.CharField(max_length=255, null=True)),
+                ('from_date', models.DateField(max_length=255, null=True)),
+                ('until_date', models.DateField(max_length=255, null=True)),
+                ('description', models.TextField(max_length=255)),
+                ('show_in_cv', models.BooleanField()),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
