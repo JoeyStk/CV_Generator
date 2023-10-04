@@ -1,0 +1,56 @@
+{% extends "_base.html" %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <table class="w-full my-4">
+        <thead>
+            <td>
+                In CV
+            </td>
+            <td colspan="2">
+                Date
+            </td>
+            <td>
+                Title
+            </td>
+            <td>
+                Company
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Operations
+            </td>
+        </thead>
+        {% for experience in experiences %}
+            <tr>
+                <td>
+                    <input value={{experience.id}} name="show_in_cv" type="checkbox" {% if experience.show_in_cv %} checked {% endif %}>
+                </td>
+                <td>
+                    {{ experience.from_date }}
+                </td>
+                <td>
+                    {{ experience.until_date }}
+                </td>
+                <td>
+                    {{ experience.title }}
+                </td>
+                <td>
+                    {{ experience.company }}
+                </td>
+                <td>
+                    {{ experience.description }}
+                </td>
+                <td>
+                    <a href="{{ experience.id }}/edit">Edit</a>
+                    <a href="{{ experience.id }}/delete">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <button type="submit" class="btn">Update</button>
+</form>
+<a class="btn rounded-full fixed bottom-12 right-12 flex items-center justify-center hover:no-underline w-12 h-12" href="#">-></a>
+{% endblock %}
