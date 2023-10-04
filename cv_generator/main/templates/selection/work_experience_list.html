@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% block content %}
+{% include "includes/breadcrumbs.html" with step=1 %}
 <form method="post">
     {% csrf_token %}
     <table class="w-full my-4">
@@ -52,5 +53,5 @@
     </table>
     <button type="submit" class="btn">Update</button>
 </form>
-<a class="btn rounded-full fixed bottom-12 right-12 flex items-center justify-center hover:no-underline w-12 h-12" href="#">-></a>
+{% include "includes/next_step.html" %}
 {% endblock %}
