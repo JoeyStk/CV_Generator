@@ -1,9 +1,5 @@
-"""
-This module holds all models
-"""
 from django.contrib.auth.models import User
 from django.db import models
-
 
 class WorkingExperience(models.Model):
     """
