@@ -22,6 +22,7 @@ class WorkingExperience(models.Model):
 
 class PersonalInformation(models.Model):
     name = models.CharField(max_length=25, blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField(max_length=255, blank=False)
     website_links = models.URLField(blank=True)
     profile_photo = models.ImageField(upload_to="images/", blank=False)
