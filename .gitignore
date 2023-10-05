@@ -4,7 +4,8 @@
 __pycache__/
 db.sqlite3
 db.sqlite3-journal
-migrations/*.py
+**/migrations/*
+!**migrations/__init__.py
 
 # Environments
 .env
