@@ -40,9 +40,11 @@ class AcademicExperience(models.Model):
     institution = models.CharField(max_length=255, blank=False)
     course = models.CharField(max_length=255, blank=False)
     degree = models.CharField(max_length=255, blank=False)
+    score = models.FloatField(blank=True)
     summary = models.TextField(blank=False)
     location = models.CharField(max_length=255, blank=False)
-    date_achieved = models.DateField(blank=False)
+    start_date = models.DateField(blank=False)
+    date_completed = models.DateField(blank=True)
 
     def __str__(self):
         return f'{self.degree}, {self.course} - {self.location}'
