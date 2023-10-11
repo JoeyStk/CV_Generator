@@ -1,8 +1,8 @@
-from .models import WorkingExperience
+from ..models import WorkingExperience
 from django.shortcuts import render
 from django.views.generic import ListView
 
-class WordExperienceView(ListView):
+class WorkingExperienceView(ListView):
     template_name = "selection/work_experience_list.html"
     model = WorkingExperience
 
